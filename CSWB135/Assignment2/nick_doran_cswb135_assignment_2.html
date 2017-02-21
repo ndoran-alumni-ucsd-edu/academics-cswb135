@@ -28,7 +28,7 @@ Assignment #2
         window.onload = function () {
 			$("btn").onclick = btn_click;
                 var xhr = new XMLHttpRequest();
-
+/*
 
 
                 // this function is called when the 'send' method is called as it changes the state
@@ -59,7 +59,7 @@ Assignment #2
 
 
                     } // end function
-
+*/
 
             } // end onload
 
@@ -76,7 +76,17 @@ function msgReceived()
 {
 	if (xhr.readyState == 4 && xhr.status == 200)
 	{
-		alert("received");
+		alert("received" + index);
+		var msg = "";
+		var xmlDoc = xhr.responseXML;
+		var team = xmlDoc.getElementsByTagName("teammember");
+		if(index >= 0 && index < team.length)
+		{
+			msg += xmlDoc.getElementsByTagName("name")[index].childNodes[0].nodeValue + "<br>";
+			msg += xmlDoc.getElementsByTagName("title")[index].childNodes[0].nodeValue + "<br>";
+			msg += xmlDoc.getElementsByTagName("bio")[index].childNodes[0].nodeValue + "<br>";
+		}
+		 $("team").innerHTML = msg;
 	}
 }
 			
