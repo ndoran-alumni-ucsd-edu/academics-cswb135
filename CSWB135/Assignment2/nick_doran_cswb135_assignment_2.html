@@ -64,11 +64,20 @@ Assignment #2
             } // end onload
 
 var index = -1;
+var xhr;
 			
 // helper function to replace document.getElementById.
 function $(id)
 {
 	return document.getElementById(id);
+}
+			
+function msgReceived()
+{
+	if (xhr.readyState == 4 && xhr.status == 200)
+	{
+		alert("received");
+	}
 }
 			
 function btn_click()
@@ -78,7 +87,11 @@ function btn_click()
 	{
 		index = sel.selectedIndex;
 	}
-	alert(index);
+	//alert(index);
+	xhr = new XMLHttpRequest();
+	xhr.onreadystatechange = msgReceived;
+	xhr.open("GET", "team.xml", true);
+	xhr.send();
 }			
 			
     </script>
