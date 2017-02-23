@@ -1,3 +1,8 @@
 assignment 2 todo
 read the assignment 
 write the code
+comments
+more checks for null, etc
+make sure that the request object is only created once!
+
+

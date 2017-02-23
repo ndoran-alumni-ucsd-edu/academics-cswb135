@@ -84,7 +84,7 @@ function msgReceived()
 		{
 			msg += xmlDoc.getElementsByTagName("name")[index].childNodes[0].nodeValue + "<br>";
 			msg += xmlDoc.getElementsByTagName("title")[index].childNodes[0].nodeValue + "<br>";
-			msg += xmlDoc.getElementsByTagName("bio")[index].childNodes[0].nodeValue + "<br>";
+			msg += xmlDoc.getElementsByTagName("bio")[index].childNodes[0].nodeValue + "<br><br>";
 		}
 		 $("team").innerHTML = msg;
 	}
