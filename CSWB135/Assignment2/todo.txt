@@ -1,8 +1,8 @@
 assignment 2 todo
-read the assignment 
-write the code
+xread the assignment 
+xwrite the code
 comments
 more checks for null, etc
-make sure that the request object is only created once!
-
+xmake sure that the request object is only created once!
+xbug - doesn't work first time?
 

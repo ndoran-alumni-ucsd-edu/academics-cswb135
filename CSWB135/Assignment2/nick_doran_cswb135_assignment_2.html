@@ -28,43 +28,11 @@ Assignment #2
         window.onload = function () {
 			$("btn").onclick = btn_click;
                 var xhr = new XMLHttpRequest();
-/*
-
-
-                // this function is called when the 'send' method is called as it changes the state
-                xhr.onreadystatechange = function () {
-                        if (xhr.readyState == 4 && xhr.status == 200) {
-
-                            xmlDoc = xhr.responseXML;
-                            var team = xmlDoc.getElementsByTagName("teammember");
-                            var html = "";
-                            for (i = 0; i < team.length; i++) {
-                                html +=
-                                    xmlDoc.getElementsByTagName("name")[i].childNodes[0].nodeValue + "<br>" +
-                                    xmlDoc.getElementsByTagName("title")[i].childNodes[0].nodeValue + "<br>" +
-                                    xmlDoc.getElementsByTagName("bio")[i].childNodes[0].nodeValue + "<br><br>";
-                            } // end for loop
-
-                            document.getElementById("team").innerHTML = html;
-
-                        } // end if
-
-                        // if the readyState and status are not okay
-                        else {
-                            document.getElementById("team").innerHTML = "Sorry error with request";
-                        } // end else
-
-                        xhr.open("GET", "team.xml", true);
-                        xhr.send();
-
-
-                    } // end function
-*/
-
             } // end onload
 
 var index = -1;
-var xhr;
+var xhr = null;
+var xmlDoc = null;
 			
 // helper function to replace document.getElementById.
 function $(id)
@@ -76,17 +44,9 @@ function msgReceived()
 {
 	if (xhr.readyState == 4 && xhr.status == 200)
 	{
-		alert("received" + index);
-		var msg = "";
-		var xmlDoc = xhr.responseXML;
-		var team = xmlDoc.getElementsByTagName("teammember");
-		if(index >= 0 && index < team.length)
-		{
-			msg += xmlDoc.getElementsByTagName("name")[index].childNodes[0].nodeValue + "<br>";
-			msg += xmlDoc.getElementsByTagName("title")[index].childNodes[0].nodeValue + "<br>";
-			msg += xmlDoc.getElementsByTagName("bio")[index].childNodes[0].nodeValue + "<br><br>";
-		}
-		 $("team").innerHTML = msg;
+		//alert("received" + index);
+		xmlDoc = xhr.responseXML;
+		update();
 	}
 }
 			
@@ -98,10 +58,33 @@ function btn_click()
 		index = sel.selectedIndex;
 	}
 	//alert(index);
-	xhr = new XMLHttpRequest();
-	xhr.onreadystatechange = msgReceived;
-	xhr.open("GET", "team.xml", true);
-	xhr.send();
+	if(xhr == null)
+	{
+		xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = msgReceived;
+		xhr.open("GET", "team.xml", true);
+		xhr.send();
+		//alert("was null");
+	}
+	else
+	{
+		//alert("was not null");
+		update();
+	}
+}			
+
+function update()
+{
+		var msg = "";
+		
+		var team = xmlDoc.getElementsByTagName("teammember");
+		if(index >= 0 && index < team.length)
+		{
+			msg += xmlDoc.getElementsByTagName("name")[index].childNodes[0].nodeValue + "<br>";
+			msg += xmlDoc.getElementsByTagName("title")[index].childNodes[0].nodeValue + "<br>";
+			msg += xmlDoc.getElementsByTagName("bio")[index].childNodes[0].nodeValue + "<br><br>";
+		}
+		 $("team").innerHTML = msg;
 }			
 			
     </script>
