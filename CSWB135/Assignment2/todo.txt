@@ -1,8 +1,9 @@
 assignment 2 todo
 xread the assignment 
 xwrite the code
-comments
-more checks for null, etc
+xcomments
+xmore checks for null, etc
 xmake sure that the request object is only created once!
 xbug - doesn't work first time?
+xtest with other browsers
 

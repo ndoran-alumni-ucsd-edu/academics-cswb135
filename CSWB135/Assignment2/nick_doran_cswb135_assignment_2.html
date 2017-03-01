@@ -25,13 +25,19 @@ Assignment #2
     </style>
 
     <script>
-        window.onload = function () {
-			$("btn").onclick = btn_click;
-                var xhr = new XMLHttpRequest();
-            } // end onload
 
+// function called on form load	
+window.onload = function () {
+	// wire the button to a function
+	$("btn").onclick = btn_click;
+} // end onload
+
+// global variables
+// index of the drop-down.  initialized to -1
 var index = -1;
+// initialize the response to null
 var xhr = null;
+// initialize the xml doc to null
 var xmlDoc = null;
 			
 // helper function to replace document.getElementById.
@@ -39,52 +45,78 @@ function $(id)
 {
 	return document.getElementById(id);
 }
-			
+
+// this is the function that is called when the message is received
 function msgReceived()
 {
+	// check to see if the response is good
 	if (xhr.readyState == 4 && xhr.status == 200)
 	{
+		// this was here for debugging
 		//alert("received" + index);
+		// set the global xml doc to the response xml
 		xmlDoc = xhr.responseXML;
+		// update the form
 		update();
 	}
 }
-			
+	
+// this is the function handler	for the button
 function btn_click()
 {
+	// get the drop-down
 	var sel = $("member");
+	// check the selected index
 	if(sel.selectedIndex >= 0)
 	{
+		// set the index var to this (to be used in the update function)
 		index = sel.selectedIndex;
 	}
+	
+	// more debugging
 	//alert(index);
+	// make sure that the request has not been created before
 	if(xhr == null)
 	{
+		// this function only gets called the first time you click the button
+		// create a new request
 		xhr = new XMLHttpRequest();
+		// set the callback
 		xhr.onreadystatechange = msgReceived;
+		// open the connection (final parameter is asynchronous)
 		xhr.open("GET", "team.xml", true);
+		// send the request
 		xhr.send();
+		// more debugging
 		//alert("was null");
 	}
 	else
 	{
+		// debug
 		//alert("was not null");
+		// update the gui
 		update();
 	}
 }			
 
+// this function updates the gui
 function update()
 {
-		var msg = "";
-		
-		var team = xmlDoc.getElementsByTagName("teammember");
-		if(index >= 0 && index < team.length)
-		{
-			msg += xmlDoc.getElementsByTagName("name")[index].childNodes[0].nodeValue + "<br>";
-			msg += xmlDoc.getElementsByTagName("title")[index].childNodes[0].nodeValue + "<br>";
-			msg += xmlDoc.getElementsByTagName("bio")[index].childNodes[0].nodeValue + "<br><br>";
-		}
-		 $("team").innerHTML = msg;
+	// initialize the string we're building
+	var msg = "";
+	// get all of the team member
+	var team = xmlDoc.getElementsByTagName("teammember");
+	// make sure that our index is in the correct range
+	if(index >= 0 && index < team.length)
+	{
+		// add the name (plus a break tag)
+		msg += xmlDoc.getElementsByTagName("name")[index].childNodes[0].nodeValue + "<br>";
+		// add the title (plus the break tag)
+		msg += xmlDoc.getElementsByTagName("title")[index].childNodes[0].nodeValue + "<br>";
+		// add the bio (plus two break tags)
+		msg += xmlDoc.getElementsByTagName("bio")[index].childNodes[0].nodeValue + "<br><br>";
+	}
+	 $("team").innerHTML = msg;
 }			
 			
     </script>
