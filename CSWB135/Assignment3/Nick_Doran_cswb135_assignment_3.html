@@ -98,7 +98,48 @@ Assignment #3
             background: aliceblue;
         }
     </style>
-
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+    </script>
+	
+	<script>
+	// helper function to replace document.getElementById.
+	/*function $(id)
+	{
+		return document.getElementById(id);
+	}*/
+	
+	
+	// function called on form load	
+	window.onload = function () {
+		//alert("onload");
+		// wire the button to a function
+		$('#btnSend').click(btnSend_click);
+		$("#btnClear").click(btnClear_click);
+	} // end onload
+	
+	
+	function btnSend_click(event)
+	{
+		event.preventDefault();
+		alert("test");
+		$.ajax({
+			method: "GET",
+			url: "process.php",
+			success: resultReceived
+		});
+	}
+	
+	function resultReceived(result)
+	{
+		alert("received" + result);
+	}
+	
+	function btnClear_click()
+	{
+	}
+	
+	</script>
 
 </head>
 
