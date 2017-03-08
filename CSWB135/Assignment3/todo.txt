@@ -1,0 +1,11 @@
+don't touch the html
+css is fair game
+use GET
+watch the video for the week
+read stuff
+extra credit - new page with response
+not new page, but make other stuff disappear
+use hide()
+use ajax success function
+
+
