@@ -122,21 +122,30 @@ Assignment #3
 	function btnSend_click(event)
 	{
 		event.preventDefault();
-		alert("test");
+		//alert("test");
+		var formData = $('#frmContact').serialize();
+		alert(formData);
 		$.ajax({
 			method: "GET",
 			url: "process.php",
+			data: formData,
 			success: resultReceived
 		});
 	}
 	
 	function resultReceived(result)
 	{
-		alert("received" + result);
+		//alert("received" + result);
+		updateResult(result);
 	}
 	
 	function btnClear_click()
 	{
+	}
+	
+	function updateResult(msg)
+	{
+		$('#result').html(msg);
 	}
 	
 	</script>
