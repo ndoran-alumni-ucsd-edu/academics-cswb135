@@ -109,6 +109,8 @@ Assignment #3
 		return document.getElementById(id);
 	}*/
 	
+	var INVALID_DATA_MESSAGE = "Something went wrong. Please fill in all information and try again!";
+	
 	
 	// function called on form load	
 	window.onload = function () {
@@ -137,7 +139,15 @@ Assignment #3
 	function resultReceived(result)
 	{
 		//alert("received" + result);
-		updateResult(result);
+		if(result != INVALID_DATA_MESSAGE)
+		{
+			hideItems();
+			updateResult(result);
+		}
+		else
+		{
+			updateResult(result);
+		}
 	}
 	
 	function errorReceived(xhr, status, error)
@@ -154,6 +164,16 @@ Assignment #3
 	function updateResult(msg)
 	{
 		$('#result').html(msg);
+	}
+	
+	function hideItems()
+	{
+		//alert("hide");
+		$("#frmContact").hide();
+		$("h1").hide();
+		$("h2").hide();
+		$("p").hide();
+		$("#result").show();
 	}
 	
 	</script>
