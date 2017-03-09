@@ -7,5 +7,9 @@ extra credit - new page with response
 not new page, but make other stuff disappear
 use hide()
 use ajax success function
+test the error case
+where does the "All fields are required" text come from?  apparently it's just baked in.
+
+
 
 

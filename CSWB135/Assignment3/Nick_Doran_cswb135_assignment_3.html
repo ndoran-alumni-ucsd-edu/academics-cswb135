@@ -124,12 +124,13 @@ Assignment #3
 		event.preventDefault();
 		//alert("test");
 		var formData = $('#frmContact').serialize();
-		alert(formData);
+		//alert(formData);
 		$.ajax({
 			method: "GET",
 			url: "process.php",
 			data: formData,
-			success: resultReceived
+			success: resultReceived,
+			error: errorReceived
 		});
 	}
 	
@@ -139,8 +140,15 @@ Assignment #3
 		updateResult(result);
 	}
 	
+	function errorReceived(xhr, status, error)
+	{
+		//alert("error:" + error);
+		updateResult("Error: " + xhr.status + " " + xhr.statusText);
+	}
+	
 	function btnClear_click()
 	{
+		updateResult("");
 	}
 	
 	function updateResult(msg)
