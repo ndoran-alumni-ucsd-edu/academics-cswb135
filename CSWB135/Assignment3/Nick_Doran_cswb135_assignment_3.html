@@ -10,6 +10,7 @@ Nick Doran
 CSWB 135
 Assignment #3
 3/2/17
+(includes extra credit)
 -->
 
 
@@ -103,77 +104,115 @@ Assignment #3
     </script>
 	
 	<script>
-	// helper function to replace document.getElementById.
-	/*function $(id)
-	{
-		return document.getElementById(id);
-	}*/
-	
+
+	// a constant to store the message that we're looking for in the case of an incomplete form	
 	var INVALID_DATA_MESSAGE = "Something went wrong. Please fill in all information and try again!";
-	
+	// a constant to enable or disable my debugging
+	var DEBUG_MODE = false;
 	
 	// function called on form load	
 	window.onload = function () {
-		//alert("onload");
-		// wire the button to a function
+		// debugging code
+		debug("onload");
+		// wire the send button to a function
 		$('#btnSend').click(btnSend_click);
+		// wire the clear button to a function
 		$("#btnClear").click(btnClear_click);
 	} // end onload
 	
+	// note my disdain for anonymous functions.  It discourages code re-use, and upsets me.
 	
+	// this is the function that is called on the send button click
 	function btnSend_click(event)
 	{
+		// this is a submit button, so we have to prevent the default of submitting the form to the back end
 		event.preventDefault();
-		//alert("test");
+		// debug code
+		debug("test");
+		// get the form data and serialize it
 		var formData = $('#frmContact').serialize();
-		//alert(formData);
+		// debug
+		debug(formData);
+		// call ajax with parameters as described inline below
 		$.ajax({
-			method: "GET",
-			url: "process.php",
-			data: formData,
-			success: resultReceived,
-			error: errorReceived
+			method: "GET",			// use GET to make this request (that's the default)
+			url: "process.php",		// this is the URL of the PHP we're calling
+			data: formData,			// this is the serialized form data.  Apparently the back end is wired to accept it in this form
+			success: resultReceived,// this is the callback for success
+			error: errorReceived	// this is the callback for an error
 		});
 	}
 	
+	// this function is called wieh we get our asynchronous result
 	function resultReceived(result)
 	{
-		//alert("received" + result);
+		// debug
+		debug("received" + result);
+		// if the message is not the incomplete form message....
 		if(result != INVALID_DATA_MESSAGE)
 		{
+			// then hide all of the other items on the page (this is the extra credit portion)
 			hideItems();
+			// and disply the message
 			updateResult(result);
 		}
-		else
+		else	// if is the incomplete form message...
 		{
+			// then display that message (but don't hide everything, b/c you still need it!)
 			updateResult(result);
 		}
 	}
 	
+	// this is the function called in the case of an error.  This was tested by mis-naming the php script
 	function errorReceived(xhr, status, error)
 	{
-		//alert("error:" + error);
+		// debug error
+		debug("error:" + error);
+		// display the error message in the same way that the other messages are displayed
 		updateResult("Error: " + xhr.status + " " + xhr.statusText);
 	}
 	
+	// this is the function that is called when the clear button is clicked.
 	function btnClear_click()
 	{
+		// clear the result <p>
 		updateResult("");
+		// the fact that the button type is reset means that it automatically clears the text fields
 	}
 	
+	// this function displays a message to the user in the "result" <p> tag
 	function updateResult(msg)
 	{
+		// jquery is great!  this would have been harder and less readable without it.
 		$('#result').html(msg);
 	}
 	
+	// this function hides the items originally in the form, highlighting the returned message.
 	function hideItems()
 	{
-		//alert("hide");
+		// debug
+		debug("hide");
+		// hide everything that's part of the form
 		$("#frmContact").hide();
+		// hide the h1 and h2 elements
 		$("h1").hide();
 		$("h2").hide();
+		// hide all paragraph elements
 		$("p").hide();
+		// un-hide (aka show) the result div.  I couldn't find a way to uniquely identify the "All fields are required" paragraph
 		$("#result").show();
+	}
+	
+	// this function is used for debugging
+	function debug(msg)
+	{
+		// based on a global constant
+		if(DEBUG_MODE)
+		{
+			// it will alert.  it can get annoying when turned on.
+			alert(msg);
+			// if we were allowed to touch the HTML, I would have done this in a less obtrusive manner.
+		}
 	}
 	
 	</script>
