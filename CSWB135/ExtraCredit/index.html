@@ -14,7 +14,9 @@
 			$.getJSON(url, function(data){
 				var html = "";
 				$.each(data.items, function(i, item){
-					html += "<h2>" + item.title + "</h2>";	
+					html += "<h2>" + item.title + "</h2>";
+					html += "<p>URL: " + item.link + "</p>"; // make this a link
+					html += "<p>Date Taken: " + item.date_taken + "</p>";
 					html += "<img src=" + item.media.m + ">";
 					html += "<p></p>";
 				});
