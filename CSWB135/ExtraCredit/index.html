@@ -15,7 +15,7 @@
 				var html = "";
 				$.each(data.items, function(i, item){
 					html += "<h2>" + item.title + "</h2>";
-					html += "<p>URL: " + item.link + "</p>"; // make this a link
+					html += "<p>URL: <a href='" + item.link + "' target='_blank'>" + item.link + "</a></p>";
 					html += "<p>Date Taken: " + item.date_taken + "</p>";
 					html += "<img src=" + item.media.m + ">";
 					html += "<p></p>";

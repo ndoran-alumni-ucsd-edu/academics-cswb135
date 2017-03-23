@@ -1,5 +1,6 @@
 solve problem
 add comments
 use fancy replace mechanism
-make the link clickable
+xmake the link clickable
+xmake it open in a new window (tab)
 
