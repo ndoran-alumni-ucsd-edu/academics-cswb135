@@ -1,3 +1,16 @@
+<!-- this is the starter file for the extra credit assignment
+     
+     Copyright Teresa Pelkie, 2017, Reproduction or Distribution on the Web is Prohibited
+     
+     This file is for the student use only
+
+Revised by:
+Nick Doran
+CSWB 135
+Extra Credit Assignment
+3/20/17
+
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,8 +28,8 @@
 				var html = "";
 				$.each(data.items, function(i, item){
 					html += "<h2>" + item.title + "</h2>";
-					html += "<p>URL: <a href='" + item.link + "' target='_blank'>" + item.link + "</a></p>";
-					html += "<p>Date Taken: " + item.date_taken + "</p>";
+					html += "<p>URL: <a href='" + item.link + "' target='_blank'>" + item.link + "</a></p>";	// add URL
+					html += "<p>Date Taken: " + item.date_taken + "</p>";										// add date taken
 					html += "<img src=" + item.media.m + ">";
 					html += "<p></p>";
 				});

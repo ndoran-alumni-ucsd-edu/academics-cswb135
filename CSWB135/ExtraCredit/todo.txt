@@ -1,6 +1,6 @@
-solve problem
-add comments
-use fancy replace mechanism
+xsolve problem
+xadd comments, header
+zuse fancy replace mechanism
 xmake the link clickable
 xmake it open in a new window (tab)
 
