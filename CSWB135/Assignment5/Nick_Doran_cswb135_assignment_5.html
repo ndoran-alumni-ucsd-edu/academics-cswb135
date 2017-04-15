@@ -1,0 +1,89 @@
+<!--
+Nick Doran
+CSWB 135
+Assignment #5
+4/12/17
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Nick Doran - CSWB 135 Assignment 5</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js">    </script>
+	
+	<script>
+
+	// a constant to enable or disable my debugging
+	var DEBUG_MODE = false;
+	
+
+	
+	// this function is used for debugging
+	function debug(msg)
+	{
+		// based on a global constant
+		if(DEBUG_MODE)
+		{
+			// it will alert.  it can get annoying when turned on.
+			alert(msg);
+			// if we were allowed to touch the HTML, I would have done this in a less obtrusive manner.
+		}
+	}
+	
+	</script>
+
+</head>
+
+<body>
+    <div data-role="page" id="home">
+		<header data-role="header">
+			<h1>Bob's House of Pets</h1>
+		</header>
+		<section class="ui-content" role="main">
+			<h1>All Pets Veterinary Hospital</h1>
+All Pets Veterinary Hospital has been a leader in specialty veterinary care since 1990, fulfilling the need for specialty healthcare and emergency services for animals in San Diego County and Southern California. 
+
+<!-- put a span here to make it italic or fancy? -->
+No matter how little money and how few possessions you own, having a dog makes you rich.
+ -- Louis Sabin
+		</section>
+		<footer data-role="footer">
+		<div data-role="controlgroup" data-type="horizontal">
+			<a href="tel:858-357-6051" class="ui-btn">858-357-6051</a>
+			<a href="mailto:ndoran@alumni.ucsd.edu" class="ui-btn">ndoran@alumni.ucsd.edu</a>
+		</div>
+		&copy; 2017
+		</footer>
+	</div> <!--home-->
+    <div data-role="page" id="services">
+		<header data-role="header">
+			<h1>Bob's House of Pets - Services</h1>
+		</header>
+		<section class="ui-content" role="main">
+			<h1>Services</h1>
+<!-- collapsible list goes here -->
+
+ <ul>
+   <li>Three stories - 26,500 sq ft</li>
+   <li>Five treatment wards</li>
+   <li>18 exam rooms</li>
+   <li>Six operating rooms</li>
+   <li>Ultrasound, Endoscopy, electrodiagnostics, and dentistry</li>
+   <li>State of the art ICU</li>
+   <li>Full Service Laboratory</li>
+   <li>Complete Oncology Center</li>
+</ul>
+
+		</section>
+		<footer data-role="footer">
+		<div data-role="controlgroup" data-type="horizontal">
+		</div>
+		&copy; 2017
+		</footer>
+	</div> <!--home-->
+	</body>
+</html>

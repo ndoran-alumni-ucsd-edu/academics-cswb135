@@ -1,0 +1,30 @@
+design it
+make it work
+add comments
+3 files
+frame work files
+custom theme from themeroller
+difficult to override their themes?  why?
+set the viewport
+
+
+home page
+header
+navigation
+h1 element in header
+fixed footer
+content
+two links in footer (contact, email)
+one page needs a collapsible list, at least three items
+every page has same header, footer
+first page, home
+second page, services?
+third page, contact
+add css (rounded corners, shadows)
+css from themeroller
+
+
+
+
+
+
