@@ -6,7 +6,7 @@ frame work files
 custom theme from themeroller
 difficult to override their themes?  why?
 set the viewport
-
+responsive website?  lecture said "later"
 
 home page
 header
