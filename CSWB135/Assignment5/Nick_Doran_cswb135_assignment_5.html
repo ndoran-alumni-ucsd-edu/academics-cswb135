@@ -13,6 +13,7 @@ Assignment #5
 	<meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Nick Doran - CSWB 135 Assignment 5</title>
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="red.css">
 	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js">    </script>
 	
@@ -43,14 +44,14 @@ Assignment #5
     <div data-role="page" id="home">
 		<header data-role="header">
 			<h1>Bob's House of Pets</h1>
+			<nav data-role="navbar">
+				<ul>
+					<li><a href="#home" data-transition="slide">Home</a></li>
+					<li><a href="#services" data-transition="flip">Services</a></li>
+					<li><a href="#contact" data-transition="flip">Contact</a></li>
+				</ul>
+			</nav>
 		</header>
-		<nav data-role="navbar">
-			<ul>
-				<li><a href="#home">Home</a></li>
-				<li><a href="#services">Services</a></li>
-				<li><a href="#contact">Contact</a></li>
-			</ul>
-		</nav>
 		<section class="ui-content" role="main">
 			<h1>All Pets Veterinary Hospital</h1>
 All Pets Veterinary Hospital has been a leader in specialty veterinary care since 1990, fulfilling the need for specialty healthcare and emergency services for animals in San Diego County and Southern California. 
@@ -61,7 +62,7 @@ No matter how little money and how few possessions you own, having a dog makes y
  -- Louis Sabin
  </div>
 		</section>
-		<footer data-role="footer" class="ui-bar">
+		<footer data-role="footer" class="ui-bar" data-position="fixed">
 		<div data-role="controlgroup" data-type="horizontal">
 			<a href="tel:858-357-6051" class="ui-btn">858-357-6051</a>
 			<a href="mailto:ndoran@alumni.ucsd.edu" class="ui-btn">ndoran@alumni.ucsd.edu</a>
@@ -69,7 +70,9 @@ No matter how little money and how few possessions you own, having a dog makes y
 		&copy; 2017
 		</footer>
 	</div> <!--home-->
-    <div data-role="page" id="services">
+    
+	<!-- Services Page -->
+	<div data-role="page" id="services">
 		<header data-role="header">
 			<h1>Bob's House of Pets - Services</h1>
 		</header>
@@ -101,6 +104,35 @@ No matter how little money and how few possessions you own, having a dog makes y
 		</div>
 		&copy; 2017
 		</footer>
-	</div> <!--home-->
+	</div> <!--services page -->
+	
+	
+		<!-- Contact Page -->
+	<div data-role="page" id="contact">
+		<header data-role="header">
+			<h1>Bob's House of Pets - Contact</h1>
+		</header>
+		<nav data-role="navbar">
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#services">Services</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+		<section class="ui-content" role="main">
+			<h1>Contact</h1>
+<!-- collapsible list goes here -->
+1234 Main St.<br>
+San Diego, CA 92130<br>
+<a href="tel:858-357-6051">858-357-6051</a>
+		</section>
+		<footer data-role="footer">
+		<div data-role="controlgroup" data-type="horizontal">
+		</div>
+		&copy; 2017
+		</footer>
+	</div> <!--services page -->
+	
+	
 	</body>
 </html>

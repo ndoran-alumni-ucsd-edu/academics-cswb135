@@ -22,6 +22,9 @@ second page, services?
 third page, contact
 add css (rounded corners, shadows)
 css from themeroller
+use a transition
+add icons?
+run it through the validators
 
 
 
