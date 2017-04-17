@@ -25,6 +25,8 @@ css from themeroller
 use a transition
 add icons?
 run it through the validators
+add an image
+indent the quote
 
 
 
