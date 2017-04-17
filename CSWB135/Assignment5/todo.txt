@@ -27,6 +27,7 @@ add icons?
 run it through the validators
 add an image
 indent the quote
+get the footer centered
 
 
 
