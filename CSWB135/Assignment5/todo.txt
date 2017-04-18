@@ -1,35 +1,36 @@
 design it
 make it work
 add comments
-3 files
-frame work files
-custom theme from themeroller
+x3 files
+xframe work files
+xcustom theme from themeroller
 difficult to override their themes?  why?
-set the viewport
-responsive website?  lecture said "later"
+xset the viewport
+zresponsive website?  lecture said "later"
 
-home page
-header
-navigation
-h1 element in header
-fixed footer
-content
-two links in footer (contact, email)
-one page needs a collapsible list, at least three items
-every page has same header, footer
-first page, home
-second page, services?
-third page, contact
+xhome page
+xheader
+xnavigation
+xh1 element in header
+xfixed footer
+xcontent
+xtwo links in footer (contact, email)
+xone page needs a collapsible list, at least three items
+xevery page has same header, footer
+xfirst page, home
+xsecond page, services?
+xthird page, contact
 add css (rounded corners, shadows)
-css from themeroller
-use a transition
-add icons?
+xcss from themeroller
+xuse a transition
+add icons? - home icon
 run it through the validators
-add an image
+xadd an image
 xindent the quote
 xget the footer centered
 add title
 clean up transitions
+take out the nav to self
 
 
 
