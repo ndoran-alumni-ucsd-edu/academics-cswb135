@@ -26,9 +26,10 @@ use a transition
 add icons?
 run it through the validators
 add an image
-indent the quote
-get the footer centered
-
+xindent the quote
+xget the footer centered
+add title
+clean up transitions
 
 
 
