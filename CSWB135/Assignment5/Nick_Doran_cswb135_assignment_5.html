@@ -17,41 +17,19 @@ Assignment #5
 	<link rel="stylesheet" href="red.css">
 	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js">    </script>
-	
-	<script>
-
-	// a constant to enable or disable my debugging
-	var DEBUG_MODE = false;
-	
-// do I really need this?
-	
-	// this function is used for debugging
-	function debug(msg)
-	{
-		// based on a global constant
-		if(DEBUG_MODE)
-		{
-			// it will alert.  it can get annoying when turned on.
-			alert(msg);
-			// if we were allowed to touch the HTML, I would have done this in a less obtrusive manner.
-		}
-	}
-	
-	</script>
-
 </head>
 
 <body>
     <div data-role="page" id="home">
 		<header data-role="header">
 			<h1>Bob's House of Pets</h1>
-			<nav data-role="navbar">
+			<div data-role="navbar">
 				<ul>
-					<li><a href="#home" data-icon="home" data-transition="flip">Home</a></li>
+					<li><a href="#home" data-icon="home" class="ui-btn-active" data-transition="flip">Home</a></li>
 					<li><a href="#services" data-icon="gear" data-transition="flip">Services</a></li>
 					<li><a href="#contact" data-icon="phone" data-transition="flip">Contact</a></li>
 				</ul>
-			</nav>
+			</div>
 		</header>
 		<section class="ui-content" role="main">
 			<h1>Bob's House of Pets</h1>
@@ -82,13 +60,13 @@ Assignment #5
 	<div data-role="page" id="services">
 		<header data-role="header">
 			<h1>Bob's House of Pets</h1>
-			<nav data-role="navbar">
+			<div data-role="navbar">
 				<ul>
 					<li><a href="#home" data-icon="home" data-transition="flip">Home</a></li>
-					<li><a href="#services" data-icon="gear" data-transition="flip">Services</a></li>
+					<li><a href="#services" data-icon="gear" class="ui-btn-active" data-transition="flip">Services</a></li>
 					<li><a href="#contact" data-icon="phone" data-transition="flip">Contact</a></li>
 				</ul>
-			</nav>
+			</div>
 		</header>
 		<section class="ui-content" role="main">
 			<h1>Services</h1>	
@@ -126,13 +104,13 @@ Assignment #5
 	<div data-role="page" id="contact">
 		<header data-role="header">
 			<h1>Bob's House of Pets</h1>
-			<nav data-role="navbar">
+			<div data-role="navbar">
 				<ul>
 					<li><a href="#home" data-icon="home" data-transition="flip">Home</a></li>
 					<li><a href="#services" data-icon="gear" data-transition="flip">Services</a></li>
-					<li><a href="#contact" data-icon="phone" data-transition="flip">Contact</a></li>
+					<li><a href="#contact" data-icon="phone" class="ui-btn-active" data-transition="flip">Contact</a></li>
 				</ul>
-			</nav>
+			</div>
 		</header>
 		<section class="ui-content" role="main">
 			<h1>Contact</h1>
@@ -148,6 +126,6 @@ Assignment #5
 				&copy; 2017 Bob's House of Pets
 			</h3>
 		</footer>
-	</div> <!--services page -->
+	</div> <!--contact page -->
 	</body>
 </html>
