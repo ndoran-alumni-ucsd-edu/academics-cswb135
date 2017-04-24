@@ -1,5 +1,5 @@
-design it
-make it work
+xdesign it
+xmake it work
 add comments
 x3 files
 xframe work files
@@ -20,17 +20,17 @@ xevery page has same header, footer
 xfirst page, home
 xsecond page, services?
 xthird page, contact
-add css (rounded corners, shadows)
+xadd css (rounded corners, shadows)
 xcss from themeroller
 xuse a transition
-add icons? - home icon
+xadd icons? - home icon
 run it through the validators
 xadd an image
 xindent the quote
 xget the footer centered
 add title
-clean up transitions
-take out the nav to self
+xclean up transitions
+xtake out the nav to self
 
 
 
