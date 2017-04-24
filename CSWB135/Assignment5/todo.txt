@@ -1,6 +1,6 @@
 xdesign it
 xmake it work
-add comments
+zadd comments
 x3 files
 xframe work files
 xcustom theme from themeroller
@@ -24,11 +24,11 @@ xadd css (rounded corners, shadows)
 xcss from themeroller
 xuse a transition
 xadd icons? - home icon
-run it through the validators
+xrun it through the validators
 xadd an image
 xindent the quote
 xget the footer centered
-add title
+zadd title
 xclean up transitions
 xtake out the nav to self
 

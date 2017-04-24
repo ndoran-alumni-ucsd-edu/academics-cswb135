@@ -12,18 +12,25 @@ Assignment #5
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Nick Doran - CSWB 135 Assignment 5</title>
+	<!-- jquery mobile css -->
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 	<!-- from themeroller -->
 	<link rel="stylesheet" href="red.css">
+	<!-- my own local css -->
 	<link rel="stylesheet" href="pets.css">
+	<!-- jquery -->
 	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js">    </script>
+	<!-- jquery mobile (builds on top of jquery -->
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 
 <body>
+	<!-- this div is the home page -->
     <div data-role="page" id="home">
 		<header data-role="header">
+			<!-- I mostly used your content, but I did change the name, and other bits -->
 			<h1>Bob's House of Pets</h1>
+			<!-- navigation -->
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#home" data-icon="home" class="ui-btn-active" data-transition="flip">Home</a></li>
@@ -32,19 +39,22 @@ Assignment #5
 				</ul>
 			</div>
 		</header>
+		<!-- this is the main section of the home page -->
 		<section class="ui-content" role="main">
 			<h1>Bob's House of Pets</h1>
 			<p>
 			Bob's House of Pets has been a leader in specialty veterinary care since 1990, fulfilling the need for specialty healthcare and emergency services for animals in San Diego County and Southern California. 
 			</p>
+			<!-- I indented the quote to look nice, and I gave it a shadow -->
 			<div id="quote" class="ui-shadow">
 				<blockquote>
 				No matter how little money and how few possessions you own, having a dog makes you rich.
 				-- Louis Sabin
 				</blockquote>
-			</div>
+			</div><!-- quote -->
 			<img src="http://www.marcgunther.com/wp-content/uploads/2015/07/PetProtection.jpg" alt=" photo of cats and dogs">
 		</section> <!-- main -->
+		<!-- footer -->
 		<footer data-role="footer" data-position="fixed">
 			<h3>
 				<a href="tel:858-357-6051" class="ui-btn">858-357-6051</a>
@@ -53,12 +63,13 @@ Assignment #5
 				&copy; 2017 Bob's House of Pets
 			</h3>
 		</footer>
-	</div> <!--home-->
+	</div> <!-- end of home -->
     
 	<!-- Services Page -->
 	<div data-role="page" id="services">
 		<header data-role="header">
 			<h1>Bob's House of Pets</h1>
+			<!-- navigation -->
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#home" data-icon="home" data-transition="flip">Home</a></li>
@@ -67,7 +78,9 @@ Assignment #5
 				</ul>
 			</div>
 		</header>
+		<!-- this is the main content of the services page -->
 		<section class="ui-content" role="main">
+			<!-- this is my collapsible list -->
 			<h1>Services</h1>	
 			<div data-role="collapsible">
 				<h3>Our Hospital</h3>
@@ -87,7 +100,8 @@ Assignment #5
 				In summary, as part of our mission to offer high-quality specialty care for pets in the San Diego area, our hospitals boast a level of sophistication that can only be found in the most advanced human medical facilities. We strive for exceptional client service and compassionate care for patients. Since most of us have pets of our own, we understand the strong bond that our clients have with their pets, and realize that they are part of the family.
 				</p>
 			</div>
-		</section><!-- main -->
+		</section><!-- end of main / services -->
+		<!-- footer -->
 		<footer data-role="footer" data-position="fixed">
 			<h3>
 				<a href="tel:858-357-6051" class="ui-btn">858-357-6051</a>
@@ -98,11 +112,11 @@ Assignment #5
 		</footer>
 	</div> <!--services page -->
 	
-	
-		<!-- Contact Page -->
+	<!-- Contact Page -->
 	<div data-role="page" id="contact">
 		<header data-role="header">
 			<h1>Bob's House of Pets</h1>
+			<!-- navigation -->
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#home" data-icon="home" data-transition="flip">Home</a></li>
@@ -111,12 +125,14 @@ Assignment #5
 				</ul>
 			</div>
 		</header>
+		<!-- main content of contact page -->
 		<section class="ui-content" role="main">
 			<h1>Contact</h1>
 			1234 Main St.<br>
 			San Diego, CA 92130<br>
 			<a href="tel:858-357-6051">858-357-6051</a>
-		</section><!-- main -->
+		</section><!-- contact / main -->
+		<!-- footer -->
 		<footer data-role="footer" data-position="fixed">
 			<h3>
 				<a href="tel:858-357-6051" class="ui-btn">858-357-6051</a>
@@ -125,6 +141,6 @@ Assignment #5
 				&copy; 2017 Bob's House of Pets
 			</h3>
 		</footer>
-	</div> <!--contact page -->
+	</div> <!-- end of contact page -->
 	</body>
 </html>
