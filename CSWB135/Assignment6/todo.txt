@@ -1,0 +1,7 @@
+make one work well
+make it look good
+add comments
+add transparency to icon
+format the output better. a lot better.
+hide the clear button on the phone, b/c I have the X?
+
