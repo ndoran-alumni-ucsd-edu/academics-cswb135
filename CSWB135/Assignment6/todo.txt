@@ -4,4 +4,6 @@ add comments
 add transparency to icon
 format the output better. a lot better.
 hide the clear button on the phone, b/c I have the X?
+xadd some css
+fix the box showing up before click
 
