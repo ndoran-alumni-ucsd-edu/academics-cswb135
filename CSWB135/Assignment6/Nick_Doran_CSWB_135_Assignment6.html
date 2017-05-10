@@ -121,14 +121,19 @@
 </head>
 
 <body>
-	<h1>Super Distance Converter!</h1>
+	<header data-role="header">
+		<h1>Super Distance Converter!</h1>
+	</header>
+
 
     <form id='frm_milestometers'>
-        <label>Miles to Meters</label>
-        <input id="milestometers" type="number" min="1">
-        <input type="button" id="btn_milestometers" value="Calculate">
-        <input type="reset" value="Clear">
+	<div class="ui-grid-a">
+        <label for "milestometers">Miles to Meters</label>
+        <input id="milestometers" type="number" min="1" data-clear-btn="true" value="1">
+        <input type="button" id="btn_milestometers" class="ui-block-a" value="Calculate" data-inline="true">
+        <!--<input type="reset" class="ui-block-b" value="Clear" data-inline="true">-->
         <output id="o_milestometers" for="milestometers"></output>
+	</div>
     </form>
 
 
@@ -163,6 +168,9 @@
         <input type="button" id="btn_clearall" value="Clear All Values">
     </form>
 
+	<!-- footer -->
+	<footer data-role="footer" data-position="fixed">
+		<h4>&copy; 2017 Super Converter</h4>
+	</footer>
 </body>
-
 </html>
