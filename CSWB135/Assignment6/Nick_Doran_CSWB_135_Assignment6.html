@@ -14,6 +14,8 @@
 
 	<!-- jquery mobile css -->
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<!-- my css -->
+	<link rel="stylesheet" href="converter.css">
 	<!-- jquery -->
 	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 	<!-- jquery mobile (builds on top of jquery -->
@@ -121,16 +123,17 @@
 </head>
 
 <body>
-	<header data-role="header">
+
+	<div data-role="header" data-position="fixed">
 		<h1>Super Distance Converter!</h1>
-	</header>
+	</div>
 
-
+	<div id="wrapper">
     <form id='frm_milestometers'>
 	<div class="ui-grid-a">
         <label for "milestometers">Miles to Meters</label>
         <input id="milestometers" type="number" min="1" data-clear-btn="true" value="1">
-        <input type="button" id="btn_milestometers" class="ui-block-a" value="Calculate" data-inline="true">
+        <input type="button" id="btn_milestometers" class="ui-block-a ui-btn" value="Calculate" data-inline="true">
         <!--<input type="reset" class="ui-block-b" value="Clear" data-inline="true">-->
         <output id="o_milestometers" for="milestometers"></output>
 	</div>
@@ -140,7 +143,7 @@
     <form id="frm_meterstomiles">
         <label>Meters to Miles</label>
         <input id="meterstomiles" type="number" min="1">
-        <input type="button" id="btn_meterstomiles" value="Calculate">
+        <input type="button" class="ui-btn" id="btn_meterstomiles" value="Calculate">
         <input type="reset" value="Clear">
         <output id="o_meterstomiles" for="meterstomiles"></output>
     </form>
@@ -172,5 +175,6 @@
 	<footer data-role="footer" data-position="fixed">
 		<h4>&copy; 2017 Super Converter</h4>
 	</footer>
+	</div><!-- wrapper -->
 </body>
 </html>
